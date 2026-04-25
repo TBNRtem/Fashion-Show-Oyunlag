@@ -1,0 +1,57 @@
+body {
+  background: #0b0b0b;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+.venue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 40px;
+}
+
+/* STAGE */
+.stage {
+  width: 140px;
+  height: 420px;
+  background: linear-gradient(#ffd700, #b8860b);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* SIDE LAYOUT */
+.side {
+  display: flex;
+  gap: 10px;
+}
+
+/* 3 COLUMNS */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* SEAT */
+.seat {
+  width: 22px;
+  height: 22px;
+  background: #2ecc71;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected {
+  background: yellow !important;
+}

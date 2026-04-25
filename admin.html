@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Panel</title>
+  </head>
+
+  <body>
+    <h1>Admin Panel (Payment Control)</h1>
+
+    <p>Enter Booking ID:</p>
+
+    <input id="bookingId" placeholder="Paste booking ID here" />
+
+    <br /><br />
+
+    <button onclick="confirmPayment()">Confirm Payment</button>
+
+    <script>
+      async function confirmPayment() {
+        const bookingId = document.getElementById("bookingId").value;
+
+        if (!bookingId) {
+          alert("Enter booking ID first!");
+          return;
+        }
+
+        await fetch("http://localhost:5000/confirm", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            bookingId: bookingId,
+          }),
+        });
+
+        alert("Payment confirmed!");
+      }
+    </script>
+  </body>
+</html>
